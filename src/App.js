@@ -19,12 +19,13 @@ function App(props) {
       name: 'Amazon 2',
       image:
         'https://lh3.googleusercontent.com/proxy/1AfA8Q3Kg0bvxZkf1Vy0Q7-GTCm48C2kSFUu-sDLzBmg7Hv53c0errelpPzwdW9pcODF-uidScfPFzu7qw_yDZUePBV_gOBHEvl0c1WK9B_x40-C51apVuVzgCKIOdzkUY0djgeTIgjaHLzGimX-1mloaXNc',
-      description: 'Amazon 2',
+      description: 'secondt description',
       id: 'p2',
     },
   ]);
 
-  const addProductHandler = (enteredName,enteredImage,enteredDescription) =>{
+  const addProductHandler = ({enteredName,enteredImage,enteredDescription}) =>{
+    console.log('checking');
     setProducts(prevProd => {
       const updatedProduct = [...prevProd];
       updatedProduct.unshift({name : enteredName, image : enteredImage, description : enteredDescription,  id: Math.random().toString()})
@@ -35,11 +36,16 @@ function App(props) {
 
 
 
+  
   return (
     <Layout>
       <Routes>
-        <Route path='/' element={<Product productData={products} onAddProduct={addProductHandler} />} />
-        <Route path='/new-product' exact element={<NewProduct />} />
+        <Route path='/' element={<Product productData={products} />} />
+        <Route
+          path='/new-product'
+          exact
+          element={<NewProduct onAddProduct={addProductHandler} />}
+        />
       </Routes>
     </Layout>
   );

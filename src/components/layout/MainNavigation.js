@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 
 
-function MainNav() {
+function MainNavigation() {
     return (
       <header className={classes.header}>
         <div className={classes.logo}>Products</div>
@@ -23,4 +23,4 @@ function MainNav() {
     );
 }
 
-export default MainNav
+export default MainNavigation

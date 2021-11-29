@@ -11,12 +11,13 @@ function NewProductForm(props) {
     event.preventDefault();
 
     const enteredName = productName.current.value;
-    const enteredImage = productImage.current.value;
+    const enteredImage = productImage.current.value[0];
     const enteredDescription = productDescription.current.value;
 
-    // console.log(enteredName);
+    console.log(enteredName);
     // console.log(enteredImage);
-    // console.log(enteredDescription);
+    console.log(enteredDescription);
+
 
     const productData = {
       name: enteredName,
@@ -36,7 +37,7 @@ function NewProductForm(props) {
         </div>
         <div className={classes.control}>
           <label htmlFor='image'>Product Image</label>
-          <input type='file' id='image' required ref={productImage} />
+          <input type='file' id='image' ref={productImage} />
         </div>
         <div className={classes.control}>
           <label htmlFor='description'>Product Description</label>
