@@ -7,22 +7,22 @@ import Product from './components/pages/Product';
 
 function App(props) {
 
-  const [products, setProducts] = useState([
-    {
-      name: 'Amazon',
-      image:
-        'https://lh3.googleusercontent.com/proxy/1AfA8Q3Kg0bvxZkf1Vy0Q7-GTCm48C2kSFUu-sDLzBmg7Hv53c0errelpPzwdW9pcODF-uidScfPFzu7qw_yDZUePBV_gOBHEvl0c1WK9B_x40-C51apVuVzgCKIOdzkUY0djgeTIgjaHLzGimX-1mloaXNc',
-      description: 'Amazon',
-      id: 'p1',
-    },
-    {
-      name: 'Amazon 2',
-      image:
-        'https://lh3.googleusercontent.com/proxy/1AfA8Q3Kg0bvxZkf1Vy0Q7-GTCm48C2kSFUu-sDLzBmg7Hv53c0errelpPzwdW9pcODF-uidScfPFzu7qw_yDZUePBV_gOBHEvl0c1WK9B_x40-C51apVuVzgCKIOdzkUY0djgeTIgjaHLzGimX-1mloaXNc',
-      description: 'secondt description',
-      id: 'p2',
-    },
-  ]);
+  const [products, setProducts] = useState([])
+  //   {
+  //     name: 'Amazon',
+  //     image:
+  //       'https://lh3.googleusercontent.com/proxy/1AfA8Q3Kg0bvxZkf1Vy0Q7-GTCm48C2kSFUu-sDLzBmg7Hv53c0errelpPzwdW9pcODF-uidScfPFzu7qw_yDZUePBV_gOBHEvl0c1WK9B_x40-C51apVuVzgCKIOdzkUY0djgeTIgjaHLzGimX-1mloaXNc',
+  //     description: 'Amazon',
+  //     id: 'p1',
+  //   },
+  //   {
+  //     name: 'Netflix 2',
+  //     image:
+  //       'https://lh3.googleusercontent.com/proxy/1AfA8Q3Kg0bvxZkf1Vy0Q7-GTCm48C2kSFUu-sDLzBmg7Hv53c0errelpPzwdW9pcODF-uidScfPFzu7qw_yDZUePBV_gOBHEvl0c1WK9B_x40-C51apVuVzgCKIOdzkUY0djgeTIgjaHLzGimX-1mloaXNc',
+  //     description: 'secondt description',
+  //     id: 'p2',
+  //   },
+  // ]);
 
   const addProductHandler = ({enteredName,enteredImage,enteredDescription}) =>{
     console.log('checking');

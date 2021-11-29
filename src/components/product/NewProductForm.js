@@ -11,21 +11,22 @@ function NewProductForm(props) {
     event.preventDefault();
 
     const enteredName = productName.current.value;
-    const enteredImage = productImage.current.value[0];
+    const enteredImage = productImage.current.value;
     const enteredDescription = productDescription.current.value;
 
     console.log(enteredName);
-    // console.log(enteredImage);
+    console.log(enteredImage);
     console.log(enteredDescription);
 
 
-    const productData = {
-      name: enteredName,
-      Image: enteredImage,
-      description: enteredDescription,
-    };
+    // const productData = {
+    //   name: enteredName,
+    //   Image: enteredImage,
+    //   description: enteredDescription,
+    // };
 
-    props.onAddProduct(productData);
+    props.onAddProduct({enteredName,enteredImage,enteredDescription});
+    // props.onAddProduct()
   };
 
   return (
@@ -36,8 +37,8 @@ function NewProductForm(props) {
           <input type='text' id='name' required ref={productName} />
         </div>
         <div className={classes.control}>
-          <label htmlFor='image'>Product Image</label>
-          <input type='file' id='image' ref={productImage} />
+          <label htmlFor='image'>Product Image URL</label>
+          <input type='url' id='image' ref={productImage} />
         </div>
         <div className={classes.control}>
           <label htmlFor='description'>Product Description</label>
